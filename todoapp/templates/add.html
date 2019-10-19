@@ -1,0 +1,14 @@
+{% include 'headsnfoots/headers.html' %}
+<form action= "{% url 'add' %}" method="post">
+  {% csrf_token %}
+  <label for="title">Title</label><br>
+  <input type="text" name="title" id = "title"><br>
+  <label for="text">Text</label><br>
+  <input type="text" name="text" id="text">
+  <input type="submit" value="Submit">
+</form>
+<hr>
+<a href = "/">Go Back </a>
+
+
+{% include 'headsnfoots/footers.html' %}
